@@ -2,6 +2,8 @@
 " Last Change: 15-Apr-2011.
 " Version: 0.01
 "
+" If you are reading this file, you have already document file.
+"
 " *exportdoc.vim* export inline document from vimscript.
 "
 "          -------------------------------------------------------
@@ -79,8 +81,24 @@
 "   You can confirm whether the vimscript include it with seeing ExportDoc
 "   header. However, perhaps, you won't need to do anything.
 "
-" ExportDoc: exportdoc.txt:5:-2
-" " vim:tw=78:ts=8:ft=help:norl:noet:fen:fdl=0:
+"   You can generate document file from vim as following.
+"
+" >
+"   :ExportDoc
+" <
+"
+"   Also forcely
+"
+" >
+"   :ExportDoc!
+" <
+"
+" ==============================================================================
+" TODO                                                             *exportdoc-todo*
+"   * ...
+" ==============================================================================
+" vim:tw=78:ts=8:ft=help:norl:noet:fen:fdl=0:
+" ExportDoc: exportdoc.txt:7:-1
 
 function! s:ExportDoc(bang)
   for rtp in split(&rtp, ',')
