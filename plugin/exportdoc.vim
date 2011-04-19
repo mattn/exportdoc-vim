@@ -104,7 +104,7 @@
 function! s:ExportDocThisFile(bang, rtp, s)
   let rtp = a:rtp
   let s = a:s
-  let d = substitute(s, '\w\+[\\/]\(\w\+\)\.vim$', 'doc/\1.txt', '')
+  let d = substitute(s, '\w\+[\\/]\([a-zA-Z0-9-_]\+\)\.vim$', 'doc/\1.txt', '')
   if d !~ '\.txt$'
     return 0
   endif
