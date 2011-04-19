@@ -105,7 +105,7 @@ function! s:ExportDocThisFile(bang, rtp, s)
   let rtp = a:rtp
   let s = a:s
   let d = substitute(s, '\w\+[\\/]\(\w\+\)\.vim$', 'doc/\1.txt', '')
-  if d != '\.txt$'
+  if d !~ '\.txt$'
     return 0
   endif
   if filereadable(d)
